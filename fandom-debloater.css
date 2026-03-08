@@ -1,0 +1,86 @@
+/* ==UserStyle==
+@name         Fandom Debloater
+@version      20260308
+@namespace    userstyles.world/user/ddeeddii
+@description  Attempts to debloat Fandom's wiki pages by removing all the unnecessary things you most likely don't care about, like the global bar on the left.
+
+Unlike some other userstyles, this one corrects for the removed elements, meaning everything looks exactly how it should.
+@author       ddeeddii
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("fandom.com") {
+:root{
+    --\\--enable-search-bar: true
+}    
+    
+.global-navigation {
+    display: none !important;
+}
+
+.fandom-community-header__local-navigation {
+    display: none;
+}
+
+.WikiaBarWrapper {
+    display: none;
+}
+
+.main-container {
+    margin-left: 0px;
+    min-width: 702px;
+    width: 100%;
+}
+
+.fandom-sticky-header {
+    left: 0px;
+}
+
+.mcf-wrapper {
+    display: none;
+}
+
+.search-modal:before {
+    left: 0px;
+}
+
+.right-rail-wrapper {
+    display: none
+}
+
+.page__right-rail {
+    display: none
+}
+
+.fandom-community-header__background {
+    width: 100%;
+    transform: translateY(0px);
+}
+
+.notifications-placeholder {
+    display: none
+}
+
+.fandom-community-header__background.fullScreen {
+    width: 100%
+}
+    
+.global-explore-navigation {
+    display: none;
+}
+
+.fandom-sticky-header {
+    display: none !important
+}
+    
+.global-action__item.register{
+    display: none;
+}
+    
+@container style(--\\--enable-search-bar: false) {
+    .global-top-navigation {
+        display: none;
+    }
+}
+    
+}
