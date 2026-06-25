@@ -80,7 +80,11 @@ Unlike some other userstyles, this one corrects for the removed elements, meanin
 .highlight__main-container {
     display: none;
 }
-    
+ 
+div:has(> fandom-ad){
+    display:none;
+}
+
 @container style(--\\--enable-search-bar: false) {
     .global-top-navigation {
         display: none;
